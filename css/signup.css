@@ -1,0 +1,97 @@
+
+
+body {
+    background-image: url("../image/Signup_BackGround.png");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    min-height: 100vh;
+}
+
+
+
+.signupform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;       
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.signupform h1 {
+    margin-bottom: 30px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.signupform input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.signupform input[type="text"],
+.signupform input[type="email"],
+.signupform input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #555;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fdfdfd;
+    font-size: 16px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signupform input[type="submit"],
+.signupform input[type="reset"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    flex: 1;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.signupform input[type="submit"] {
+    background: #fb2525;
+    color: #fff;
+}
+
+.signupform input[type="submit"]:hover {
+    background: #ffc107;
+    color: #000;
+}
+
+
+.signupform input[type="reset"] {
+    background: #777;
+    color: #fff;
+}
+
+.signupform input[type="reset"]:hover {
+    background: #bbb;
+    color: #000;
+}
+
+
+.signupform ::placeholder {
+    color: #cccccc;
+}

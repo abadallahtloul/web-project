@@ -1,0 +1,95 @@
+body {
+    background-image: url("../image/login_BackGround.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+.loginform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: auto;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.344);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.loginform h1, 
+.loginform h2 {
+    margin: 0 0 30px;
+    color: #f1f1f1; 
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.loginform input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginform input[type="text"],
+.loginform input[type="password"]{
+    border: none;
+    border-bottom: 2px solid #555;  
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fdfdfd;   
+    font-size: 16px;
+}
+
+
+.loginform input[type="submit"],
+.loginform input[type="reset"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.loginform input[type="submit"]:hover{
+    background: #ffc107;
+    color: #000;  
+}
+
+.loginform input[type="reset"]{
+    background: #777777;
+    color: #fff;
+}
+
+.loginform input[type="reset"]:hover{
+    background: #bbbbbb;
+    color: #000;
+}
+
+
+
+.loginform a{
+    color: #e6e6e6;  
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.loginform a:hover{
+    text-decoration: underline;
+}
+
+
+.loginform ::placeholder{
+    color: #cccccc;  
+}
