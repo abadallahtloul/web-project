@@ -1,55 +1,174 @@
-[بروجيكت الويب جزء 5 p1.html](https://github.com/user-attachments/files/23128637/5.p1.html)
+
+[البروجكت html and css.html](https://github.com/user-attachments/files/23165801/html.and.css.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Adoption Model</title>
+  <title>Adoption </title>
+
+  <style>
+    
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background-image: linear-gradient(
+        rgba(255, 245, 235, 0.8),
+        rgba(255, 245, 235, 0.8)
+      ),
+      url('https://cdn.pixabay.com/photo/2016/11/29/04/17/cat-1868730_1280.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #4a4a4a;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(6px);
+      z-index: -1;
+    }
+
+  
+    form {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border-top: 6px solid #ffb78c;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2d6d70;
+      margin-top: 20px;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: all 0.3s;
+      background-color: #fdfaf8;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #f3a77c;
+      outline: none;
+      background-color: #fff9f5;
+      box-shadow: 0 0 5px rgba(243, 167, 124, 0.4);
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    input[type="submit"] {
+      background-color: #2d6d70;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #255e60;
+    }
+
+  
+    #success {
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    details {
+      background-color: #fff4ec;
+      border-left: 6px solid #f3a77c;
+      padding: 15px;
+      border-radius: 10px;
+      color: #4a3d35;
+      font-weight: 500;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
   <h2>Adoption</h2>
   <p>Please fill in the following information to complete the adoption request:</p>
 
-  <form id="adoptForm">
+  <form action="#success" method="get">
   
-    <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="name" required minlength="3"><br><br>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required minlength="3">
 
-    
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-    
-    <label for="animal">The type of animal you want to adopt:</label><br>
-    <input type="text" id="animal" name="animal" required><br><br>
+    <label for="animal">The type of animal you want to adopt:</label>
+    <input type="text" id="animal" name="animal" required>
 
- 
-    <label for="reason">The reason for adoption:</label><br>
-    <textarea id="reason" name="reason" required minlength="10"></textarea><br><br>
+    <label for="reason">The reason for adoption:</label>
+    <textarea id="reason" name="reason" required minlength="10"></textarea>
 
-    
-    <label for="phone">Phone number:</label><br>
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="مثال: 0501234567" required><br><br>
+    <label for="phone">Phone number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="like: 0501234567" required>
 
-   
     <input type="submit" value="Submit Request">
   </form>
 
- 
-  <p id="successMessage" style="display:none; color:green;">
-    ✅ The adoption request has been sent successfully! Thank you for contacting us. ❤️
-  </p>
-
-  <script>
-    const form = document.getElementById("adoptForm");
-    const success = document.getElementById("successMessage");
-
-    form.addEventListener("submit", function(event) {
-      event.preventDefault(); 
-      success.style.display = "block"; 
-      form.reset(); 
-    });
-  </script>
+  <div id="success">
+    <details open>
+      <summary>✔️ The adoption request has been sent successfully!</summary>
+      <p>Thank you for contacting us. </p>
+    </details>
+  </div>
 
 </body>
 </html>
+
