@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adoption</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+  <h2>Adoption</h2>
+  <p>Please fill in the following information to complete the adoption request:</p>
+
+  <form action="#success" method="get">
+  
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required minlength="3">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="animal">The type of animal you want to adopt:</label>
+    <input type="text" id="animal" name="animal" required>
+
+    <label for="reason">The reason for adoption:</label>
+    <textarea id="reason" name="reason" required minlength="10"></textarea>
+
+    <label for="phone">Phone number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="like: 0501234567" required>
+
+    <input type="submit" value="Submit Request">
+  </form>
+
+  <div id="success">
+    <details open>
+      <summary>✔️ The adoption request has been sent successfully!</summary>
+      <p>Thank you for contacting us. ❤️</p>
+    </details>
+  </div>
+
+</body>
+</html>

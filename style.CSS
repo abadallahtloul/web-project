@@ -1,0 +1,127 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-image: linear-gradient(
+    rgba(255, 245, 235, 0.8),
+    rgba(255, 245, 235, 0.8)
+  ),
+  url('https://cdn.pixabay.com/photo/2016/11/29/04/17/cat-1868730_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  z-index: -1;
+}
+
+
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #ffb78c;
+}
+
+h2 {
+  text-align: center;
+  color: #2d6d70;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  background-color: #fdfaf8;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #f3a77c;
+  outline: none;
+  background-color: #fff9f5;
+  box-shadow: 0 0 5px rgba(243, 167, 124, 0.4);
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+input[type="submit"] {
+  background-color: #2d6d70;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #255e60;
+}
+
+
+#success {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+details {
+  background-color: #fff4ec;
+  border-left: 6px solid #f3a77c;
+  padding: 15px;
+  border-radius: 10px;
+  color: #4a3d35;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
